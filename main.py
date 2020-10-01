@@ -1,0 +1,16 @@
+strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+
+def on_forever():
+    strip.set_pixel_color(2, neopixel.colors(NeoPixelColors.GREEN))
+    strip.show()
+    basic.pause(1000)
+    strip.clear()
+    strip.set_pixel_color(1, neopixel.colors(NeoPixelColors.YELLOW))
+    strip.show()
+    basic.pause(1000)
+    strip.clear()
+    strip.set_pixel_color(0, neopixel.colors(NeoPixelColors.RED))
+    strip.show()
+    basic.pause(1000)
+    strip.clear()
+basic.forever(on_forever)
